@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% block title %}Balance{% endblock %}
+{% block content %}
+    <div class="balance">
+        <h3>Balance: {{ user.balance }}</h3>
+        <form class="navbar-form" action="{% url 'deposit' %}" method="post">
+            {% csrf_token %}
+            <input class="form-control" name="deposit" type="number" min="0" placeholder="1000">
+            <button class="btn btn-info">Deposit</button>
+        </form>
+    </div>
+{% endblock content %}

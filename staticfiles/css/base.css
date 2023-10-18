@@ -1,0 +1,53 @@
+.bs-component {
+    margin: 0;
+}
+
+h1 {
+    color: crimson;
+}
+
+INPUT[type="text"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+INPUT[type="email"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+INPUT[type="password"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+.avatar {
+    height: 150px;
+    width: auto;
+}
+
+.gamecover {
+    border: none;
+    height: 200px;
+    width: 200px;
+}
+
+.gamename {
+    border: none;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.gamename:hover {
+    color: #CCFFFF;
+    text-decoration: none;
+}
+.gamename:visited {
+    text-decoration: none;
+}
+
+.topuseravatar {
+    height: 100px;
+    width: 100px;
+}

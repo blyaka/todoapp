@@ -1,0 +1,77 @@
+.bs-component {
+    margin: 0;
+}
+
+h1 {
+    color: crimson;
+}
+
+INPUT[type="text"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+INPUT[type="email"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+INPUT[type="password"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+input[name="title"] {
+    background-color: #424242;
+    color: whitesmoke;
+}
+
+textarea[name="text"] {
+    background-color: #424242;
+    color: whitesmoke;
+    resize: none;
+}
+
+.avatar {
+    height: 150px;
+    width: auto;
+}
+
+#newnote-list-button {
+    text-align: center;
+}
+
+a[id="white-button"] {
+    text-decoration: none;
+    color: whitesmoke;
+}
+a[id="white-button"].hover {
+    text-decoration: none;
+    color: whitesmoke;
+}
+a[id="white-button"].active {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#pagination {
+    align-content: center;
+    align-items: center;
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
+li.disabled {
+    cursor: not-allowed;
+}
+
+#home-text {
+    text-align: center;
+}
+
+.list-pages {
+    text-align: center;
+}
+

@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block content %}
+    {% if user == note.pub_author %}
+        <div class="note">
+            <h3>{{ note.note_title }}</h3>
+            <p>{{ note.note_text }}</p>
+            <p>{{ note.pub_author }}</p>
+        </div>
+        {% if note.is_active %}
+            <p>Выполнено {{ note.pub_date }}</p>
+            <form method="POST" id="active-note-form" action="{% url 'active-note' %}">
+                {% csrf_token %}
+                <input name="noteid" value="{{ note.id }}" hidden="true">
+                <input name="activeFalse" value="False" hidden="true">
+                <button class="btn btn-default" type="submit">Не сделано!</button>
+            </form>
+        {% else %}
+            <form method="POST" id="active-note-form" action="{% url 'active-note' %}">
+                {% csrf_token %}
+                <input name="noteid" value="{{ note.id }}" hidden="true">
+                <button class="btn btn-default" type="submit">Сделано!</button>
+            </form>
+        {% endif %}
+
+
+
+
+    {% else %}
+        <div class="note">
+            <h3>Permission denied</h3>
+        </div>
+    {% endif %}
+
+
+{% endblock content %}

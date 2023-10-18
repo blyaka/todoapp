@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block title %}Notes{% endblock %}
+{% block content %}
+    <h3>New note</h3>
+    <div class="form-group">
+        <form method="POST" action="{% url 'notecreate' %}">
+            {% csrf_token %}
+            <input required placeholder="Title" class="form-control" id="inputDefault" name="title">
+            <textarea placeholder="Note text" cols="30" rows="15" class="form-control" id="textArea" name="text"></textarea>
+            <p>
+                <input type="checkbox" name="datecheck">
+                <label for="date">Do before</label>
+                <input type="date" id="date" name="date"/>
+            </p>
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-info">Create</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+{% load i18n %}
+{% block title %}Profile {{ profile.username }}{% endblock %}
+{% block content %}
+    <div class="profile">
+        <img src="{{ profile.get_avatar }}" class="avatar">
+        <h1 class="profileName">{{ profile.username }}</h1>
+        <h3 class="profileMail">E-mail: {{ profile.email }}</h3>
+        <button class="btn btn-default"><a href="{% url 'account_change_password' %}">Сменить пароль</a></button>
+    </div>
+
+
+{% endblock content %}
